@@ -1,0 +1,45 @@
+:root {
+  color-scheme: light;
+  --bg: #fafaf9;
+  --panel: #ffffff;
+  --line: #e7e5e4;
+  --text: #1c1917;
+  --muted: #78716c;
+  --accent: #3e82f7;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+body { margin: 0; }
+.shell { max-width: 880px; margin: 0 auto; padding: 0 16px 48px; }
+.top { display: flex; align-items: center; gap: 24px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.brand { font-weight: 600; }
+.top nav { display: flex; gap: 16px; }
+.top nav a { color: var(--muted); text-decoration: none; }
+.top nav a.active { color: var(--text); }
+h1 { font-size: 22px; font-weight: 600; margin: 24px 0 12px; }
+h2 { font-size: 16px; font-weight: 600; margin: 28px 0 8px; }
+a { color: var(--accent); }
+.muted { color: var(--muted); }
+.row { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.list { list-style: none; padding: 0; margin: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; }
+.list li { display: grid; grid-template-columns: 1fr auto auto; gap: 16px; align-items: center; padding: 12px 14px; border-top: 1px solid var(--line); }
+.list li:first-child { border-top: 0; }
+.badge { font-size: 12px; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--line); text-transform: capitalize; }
+.badge-open { background: #eff6ff; border-color: #bfdbfe; }
+.badge-pending { background: #fefce8; border-color: #fde68a; }
+.badge-closed { background: #f5f5f4; }
+.comments { list-style: none; padding: 0; }
+.comments li { padding: 10px 0; border-top: 1px solid var(--line); }
+.comments p { margin: 4px 0 0; }
+.reply { display: grid; gap: 8px; margin-top: 16px; }
+textarea, select { font: inherit; padding: 6px 8px; border: 1px solid var(--line); border-radius: 8px; }
+button { justify-self: start; font: inherit; padding: 8px 14px; border-radius: 8px; border: 1px solid var(--text); background: var(--text); color: white; cursor: pointer; }
+.error { color: #b91c1c; margin: 0; }
+table { width: 100%; border-collapse: collapse; background: var(--panel); border: 1px solid var(--line); }
+th, td { text-align: left; padding: 10px 12px; border-top: 1px solid var(--line); }
+th { color: var(--muted); font-weight: 500; }
+@media (max-width: 560px) {
+  .list li { grid-template-columns: 1fr auto; }
+  .list li .muted { display: none; }
+}
